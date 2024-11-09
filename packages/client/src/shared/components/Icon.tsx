@@ -1,4 +1,5 @@
 import { icons } from "lucide-preact";
+import { AccessibleIcon } from "./radix.ts";
 
 interface IIconProps {
   name: keyof typeof icons;
@@ -18,11 +19,13 @@ export default function Icon(props: IIconProps) {
   const weight = props.weight || "normal";
 
   return (
-    <LucideIcon
-      className={props.className}
-      color={props.color}
-      strokeWidth={parseWeight(weight)}
-    />
+    <AccessibleIcon.Root>
+      <LucideIcon
+        className={props.className}
+        color={props.color}
+        strokeWidth={parseWeight(weight)}
+      />
+    </AccessibleIcon.Root>
   );
 }
 
