@@ -8,7 +8,7 @@ import { Contract } from "ethers";
  *
  * @param hre HardhatRuntimeEnvironment object.
  */
-const deployAMCFactory: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
+const deployOrchestrator: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   /*
     On localhost, the deployer account is the one that comes with Hardhat, which is already funded.
 
@@ -22,7 +22,7 @@ const deployAMCFactory: DeployFunction = async function (hre: HardhatRuntimeEnvi
   const { deployer } = await hre.getNamedAccounts();
   const { deploy } = hre.deployments;
 
-  await deploy("AMCFactory", {
+  await deploy("Orchestrator", {
     from: deployer,
     // Contract constructor arguments
     args: [],
@@ -37,8 +37,8 @@ const deployAMCFactory: DeployFunction = async function (hre: HardhatRuntimeEnvi
   // console.log("👋 Initial greeting:", await yourContract.greeting());
 };
 
-export default deployAMCFactory;
+export default deployOrchestrator;
 
 // Tags are useful if you have multiple deploy files and only want to run one of them.
 // e.g. yarn deploy --tags YourContract
-deployAMCFactory.tags = ["AMCFactory"];
+deployOrchestrator.tags = ["Orchestrator"];
