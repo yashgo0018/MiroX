@@ -5,7 +5,7 @@ export default function OAuthLoginOptions() {
   const { initOAuth, loginWithOAuth } = useLoginWithOAuth();
 
   function handleOAuthLogin(
-    provider: "google" | "twitter" | "discord",
+    provider: "google" | "twitter" | "discord" | "github",
   ) {
     initOAuth({ provider }).then(() =>
       loginWithOAuth().catch(() => {
@@ -55,10 +55,13 @@ export default function OAuthLoginOptions() {
         </button>
 
         <button
-          className={"btn-icon rounded-full overflow-hidden p-1 bg-violet-500 hover:blur-md focus:blur-md"}
-          title="Login using Farcaster (Coming Soon)"
+          className={"btn-icon rounded-full overflow-hidden p-1 bg-violet-50"}
+          title="Continue with GitHub"
+          onClick={() => {
+            handleOAuthLogin("github");
+          }}
         >
-          <img src="/icons/farcaster.webp" alt="Farcaster" />
+          <img src="/icons/github.png" alt="github" />
         </button>
       </div>
     </>
