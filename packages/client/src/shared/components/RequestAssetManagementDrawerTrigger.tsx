@@ -22,9 +22,9 @@ export default function RequestAssetManagementDrawer(
           <div className="p-4 base flex flex-col items-center">
             <Drawer.Handle />
 
-            <h1 className={"mt-2"}>
+            <Drawer.Title className={"mt-2"}>
               Request Asset Management
-            </h1>
+            </Drawer.Title>
 
             <Form.Root
               onSubmit={(

@@ -12,41 +12,37 @@ export default function DepositTokenSelect() {
   return (
     <Select.Root>
       <Select.Trigger
-        className="base invert rounded text-xs active:scale-75 duration-150"
+        className="rounded text-xs active:scale-75 duration-150"
         aria-label="Token"
       >
         <Select.Value placeholder="Select token" />
       </Select.Trigger>
 
       <Select.Portal>
-        <Select.Content className="">
+        <Select.Content className="base p-2 rounded border">
           <Select.ScrollUpButton className="">
             <Icon name="ChevronUp" />
           </Select.ScrollUpButton>
 
-          <Select.Viewport className="base p-2 rounded border flex flex-col gap-y-4">
+          <Select.Viewport className="flex flex-col gap-y-4">
             {allowedTokens.map((token, key) => (
               <Select.Item
                 value={token.name}
                 key={key}
               >
-                <Select.ItemIndicator className="flex items-center gap-x-3">
+                <Select.ItemText className="flex gap-x-2">
                   <img
                     src={token.icon}
                     alt={token.name}
                     className={"size-8"}
                   />
-                  <Select.ItemText>
+                  <span>
                     {token.name}
-                  </Select.ItemText>
-                </Select.ItemIndicator>
+                  </span>
+                </Select.ItemText>
               </Select.Item>
             ))}
           </Select.Viewport>
-
-          <Select.ScrollDownButton className="SelectScrollButton">
-            <Icon name="ChevronDown" />
-          </Select.ScrollDownButton>
         </Select.Content>
       </Select.Portal>
     </Select.Root>

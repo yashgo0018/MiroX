@@ -1,10 +1,13 @@
 import { ErrorBoundary, Route, Router as PreactRouter } from "preact-iso";
+
+import Layout from "./Layout.tsx";
+import { useLocation } from "preact-iso";
+
 import _404 from "./pages/_404.tsx";
 import Login from "./pages/login/page.tsx";
 import Discover from "./pages/discover/page.tsx";
 import userDashboard from "./pages/userDashboard/page.tsx";
-import Layout from "./Layout.tsx";
-import { useLocation } from "preact-iso";
+import ManagerRegistration from "./pages/managerRegistration/page.tsx";
 
 export default function Router() {
   return (
@@ -18,6 +21,8 @@ export default function Router() {
           <Route path="discover" component={Discover} />
 
           <Route path="user/dashboard" component={userDashboard} />
+
+          <Route path="new-manager" component={ManagerRegistration} />
 
           <Route default component={_404} />
         </PreactRouter>
