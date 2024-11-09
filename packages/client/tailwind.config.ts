@@ -41,7 +41,7 @@ export default {
         },
         border: "hsl(var(--border))",
       },
-      height: { "2px": "2px" },
+      height: { "2px": "2px", "ch": "1ch" },
       fontFamily: {
         openSans: "Open Sans, sans-serif",
       },
