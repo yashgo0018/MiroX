@@ -1,6 +1,6 @@
 import runtime from "../runtime.local.ts";
 
-export async function setupFixture() {
+export function setupFixture() {
   const [owner, acc1, acc2] = runtime.clients;
 
   // Everything to be done during integrated setup
