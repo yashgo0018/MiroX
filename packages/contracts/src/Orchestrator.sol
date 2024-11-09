@@ -1,9 +1,10 @@
 //SPDX-License-Identifier: MIT
-pragma solidity >=0.8.0;
+pragma solidity >=0.8.0 <0.9.0;
 
 import "./AMC.sol";
+import "./interfaces/IOrchestrator.sol";
 
-contract Orchestrator {
+contract Orchestrator is IOrchestrator {
     struct AMCRequest {
         address amc;
         address owner;
@@ -40,7 +41,11 @@ contract Orchestrator {
         address indexed manager
     );
 
-    constructor() {}
+    ISwapRouter public swapRouter;
+
+    constructor(ISwapRouter _swapRouter) {
+        swapRouter = _swapRouter;
+    }
 
     function register(string calldata username) public {
         require(
@@ -72,7 +77,8 @@ contract Orchestrator {
                 commissionBP,
                 _metadata,
                 msg.sender,
-                usernameMapping[username]
+                usernameMapping[username],
+                swapRouter
             )
         );
 
@@ -83,6 +89,14 @@ contract Orchestrator {
             commissionBP: commissionBP,
             metadata: _metadata
         });
+
+        emit RequestCreated(
+            amc,
+            msg.sender,
+            usernameMapping[username],
+            commissionBP,
+            _metadata
+        );
     }
 
     function logRequestAccepted() external {
