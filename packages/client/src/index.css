@@ -13,7 +13,7 @@
     --primary: 295 44% 44%;
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 215 18% 6%;
+    --secondary: 27 83% 36%;
     --secondary-foreground: 0 0% 96%;
 
     --muted: 214 15% 18%;
@@ -86,8 +86,11 @@
     @apply bg-gain text-gain-foreground;
   }
 
+  .btn-xs {
+    @apply h-7 text-xs rounded-sm px-2 font-medium;
+  }
   .btn-sm {
-    @apply h-9 rounded-sm px-2 font-medium;
+    @apply h-9 text-sm rounded-sm px-2 font-medium;
   }
   .btn {
     @apply h-11 rounded-md px-3 font-medium;

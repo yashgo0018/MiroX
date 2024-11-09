@@ -6,10 +6,12 @@
     "preview": "vite preview"
   },
   "imports": {
+    "@radix-ui/react-select": "npm:@radix-ui/react-select@^2.1.2",
     "privy": "npm:@privy-io/react-auth@^1.92.6",
     "tailwind-merge": "npm:tailwind-merge@^2.5.4",
     "tailwindcss-motion": "npm:tailwindcss-motion@^0.4.1-beta",
     "lucide-preact": "npm:lucide-preact",
+    "vaul": "npm:vaul@^1.1.1",
 
     "viem": "npm:viem@^2.21.40",
 
