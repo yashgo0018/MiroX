@@ -42,8 +42,13 @@ export default {
         border: "hsl(var(--border))",
       },
       height: { "2px": "2px", "ch": "1ch" },
+      flexBasis: { "2px": "2px" },
+      padding: { "2px": "2px" },
       fontFamily: {
         openSans: "Open Sans, sans-serif",
+      },
+      content: {
+        visible: " ",
       },
     },
   },

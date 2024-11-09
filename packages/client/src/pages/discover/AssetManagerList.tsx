@@ -10,6 +10,7 @@ export default function AssetManagerList() {
             key={key}
             thumbnail={manager.image}
             managerName={manager.name}
+            totalClients={manager.totalClients}
           />
           <FlexSeparator size="sm" />
         </>
@@ -22,4 +23,5 @@ const dummy = [{
   name: "Eric_Dawg",
   image:
     "https://images.squarespace-cdn.com/content/v1/585832425016e17cbf7235be/1563133523404-O9W2FB1W0ZR1V74KS4U4/Dog+Man+feature.jpg",
+  totalClients: 100,
 }];
