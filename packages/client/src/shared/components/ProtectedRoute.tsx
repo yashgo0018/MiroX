@@ -17,7 +17,7 @@ export default function ProtectedRoute(
   if (!privy.ready) return <>Wait</>;
 
   if (type === "UnauthenticatedOnly") {
-    if (privy.authenticated) return children;
+    if (!privy.authenticated) return children;
 
     location.route("/");
   }
