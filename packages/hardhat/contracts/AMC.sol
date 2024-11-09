@@ -2,6 +2,7 @@
 pragma solidity >=0.8.0 <0.9.0;
 
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+import "./IOrchestrator.sol";
 
 enum AMC_Status {
 	PROPOSED,
@@ -17,6 +18,7 @@ contract AMC {
 	string public metadata;
 	address public owner;
 	address public manager;
+	IOrchestrator public orchestrator;
 
 	modifier onlyOwner() {
 		require(msg.sender == owner, "Not the Owner");
@@ -49,21 +51,25 @@ contract AMC {
 		metadata = _metadata;
 		owner = _owner;
 		manager = _manager;
+		orchestrator = IOrchestrator(msg.sender);
 	}
 
 	function accept() external onlyManager {
 		require(status == AMC_Status.PROPOSED, "incorrect status");
 		status = AMC_Status.ACTIVE;
+		orchestrator.logRequestAccepted();
 	}
 
 	function refuse() external onlyManager {
 		require(status == AMC_Status.PROPOSED, "incorrect status");
 		status = AMC_Status.REJECTED;
+		orchestrator.logRequestRefused();
 	}
 
 	function deactivate() external onlyAuthorized {
 		require(status == AMC_Status.ACTIVE, "incorrect status");
 		status = AMC_Status.DEACTIVATED;
+		orchestrator.logRequestDeactivated();
 	}
 
 	function deposit(
