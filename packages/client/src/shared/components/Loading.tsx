@@ -13,7 +13,7 @@ export default function Loading(props: ILoadingProps) {
       )}
     >
       <span
-        className={"font-bold text-2xl text-rainbow"}
+        className={"font-bold text-xl"}
       >
         Loading
       </span>

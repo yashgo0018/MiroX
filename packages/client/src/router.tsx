@@ -5,8 +5,9 @@ import { useLocation } from "preact-iso";
 
 import _404 from "./pages/_404.tsx";
 import Login from "./pages/login/page.tsx";
+import You from "./pages/you/page.tsx";
 import Discover from "./pages/discover/page.tsx";
-import userDashboard from "./pages/userDashboard/page.tsx";
+import Portfolio from "./pages/portfolio/page.tsx";
 import ManagerRegistration from "./pages/managerRegistration/page.tsx";
 
 export default function Router() {
@@ -18,9 +19,11 @@ export default function Router() {
 
           <Route path="login" component={Login} />
 
+          <Route path="mirox" component={You} />
+
           <Route path="discover" component={Discover} />
 
-          <Route path="user/dashboard" component={userDashboard} />
+          <Route path="portfolio" component={Portfolio} />
 
           <Route path="new-manager" component={ManagerRegistration} />
 

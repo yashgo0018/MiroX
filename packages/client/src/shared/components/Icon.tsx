@@ -1,8 +1,10 @@
 import { icons } from "lucide-preact";
 import { AccessibleIcon } from "./radix.ts";
 
+export type IconName = keyof typeof icons;
+
 interface IIconProps {
-  name: keyof typeof icons;
+  name: IconName;
   color?: string;
   weight?:
     | "thin"

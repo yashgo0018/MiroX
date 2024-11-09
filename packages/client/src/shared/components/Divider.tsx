@@ -7,10 +7,10 @@ interface IDividerProps {
 
 export default function Divider(props: IDividerProps) {
   return (
-    <figure className={"relative self-stretch"} role="separator">
+    <figure className={"flex items-center"} role="separator">
       <span
         className={cn(
-          "basis-2px self-center content-visible flex-1 bg-muted",
+          "h-2px flex-1 bg-muted",
           props.className,
         )}
       />
