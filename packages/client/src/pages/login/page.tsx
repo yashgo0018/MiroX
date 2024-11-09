@@ -1,4 +1,3 @@
-import Icon from "../../shared/components/Icon.tsx";
 import FlexSeparator from "../../shared/components/FlexSeparator.tsx";
 import RiskWarningBanner from "../../shared/components/RiskWarningBanner.tsx";
 import LoginMethodSelection from "../login/LoginMethodSelection.tsx";

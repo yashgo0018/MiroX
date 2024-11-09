@@ -3,12 +3,15 @@ import _404 from "./pages/_404.tsx";
 import Login from "./pages/login/page.tsx";
 import Discover from "./pages/discover/page.tsx";
 import Layout from "./Layout.tsx";
+import { useLocation } from "preact-iso";
 
 export default function Router() {
   return (
     <Layout>
       <ErrorBoundary onError={(e) => console.error(e)}>
         <PreactRouter>
+          <Route path="" component={FallbackRoute} />
+
           <Route path="login" component={Login} />
 
           <Route path="discover" component={Discover} />
@@ -18,4 +21,12 @@ export default function Router() {
       </ErrorBoundary>
     </Layout>
   );
+}
+
+function FallbackRoute() {
+  const location = useLocation();
+
+  location.route("/discover");
+
+  return <></>;
 }
