@@ -2,6 +2,7 @@
 pragma solidity >=0.8.0 <0.9.0;
 
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+import "@uniswap/v3-periphery/contracts/interfaces/ISwapRouter.sol";
 import "./IOrchestrator.sol";
 
 enum AMC_Status {
@@ -19,6 +20,7 @@ contract AMC {
 	address public owner;
 	address public manager;
 	IOrchestrator public orchestrator;
+	ISwapRouter public swapRouter;
 
 	modifier onlyOwner() {
 		require(msg.sender == owner, "Not the Owner");
@@ -44,8 +46,10 @@ contract AMC {
 		uint16 _commissionBps,
 		string memory _metadata,
 		address _owner,
-		address _manager
+		address _manager,
+		ISwapRouter _swapRouter
 	) {
+		swapRouter = _swapRouter;
 		status = AMC_Status.PROPOSED;
 		commissionBps = _commissionBps;
 		metadata = _metadata;
@@ -84,8 +88,28 @@ contract AMC {
 		address tokenIn,
 		uint256 amountIn,
 		address tokenOut
-	) external onlyManager {
+	) external onlyManager returns (uint256 amountOut) {
 		// make a trade on uniswap
+		require(
+			IERC20(tokenIn).approve(address(swapRouter), amountIn),
+			"Approval failed"
+		);
+
+		// Set up the parameters for the swap.
+		ISwapRouter.ExactInputSingleParams memory params = ISwapRouter
+			.ExactInputSingleParams({
+				tokenIn: tokenIn,
+				tokenOut: tokenOut,
+				fee: 3000,
+				recipient: address(this),
+				deadline: block.timestamp + 300, // 5-minute deadline
+				amountIn: amountIn,
+				amountOutMinimum: 0,
+				sqrtPriceLimitX96: 0 // No price limit
+			});
+
+		// Perform the swap.
+		amountOut = swapRouter.exactInputSingle(params);
 	}
 
 	function withdraw(address tokenAddress, uint256 amount) external onlyOwner {

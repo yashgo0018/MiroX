@@ -40,7 +40,11 @@ contract Orchestrator {
 		address indexed manager
 	);
 
-	constructor() {}
+	ISwapRouter public swapRouter;
+
+	constructor(ISwapRouter _swapRouter) {
+		swapRouter = _swapRouter;
+	}
 
 	function register(string calldata username) public {
 		require(
@@ -72,7 +76,8 @@ contract Orchestrator {
 				commissionBP,
 				_metadata,
 				msg.sender,
-				usernameMapping[username]
+				usernameMapping[username],
+				swapRouter
 			)
 		);
 
@@ -83,6 +88,14 @@ contract Orchestrator {
 			commissionBP: commissionBP,
 			metadata: _metadata
 		});
+
+		emit RequestCreated(
+			amc,
+			msg.sender,
+			usernameMapping[username],
+			commissionBP,
+			_metadata
+		);
 	}
 
 	function logRequestAccepted() external {
