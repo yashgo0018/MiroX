@@ -16,10 +16,9 @@ export const privyConfig: PrivyClientConfig = {
     "email",
     "wallet",
     "google",
-    // "telegram",
+    "github",
     "discord",
     "twitter",
-    "farcaster",
   ],
   embeddedWallets: {
     createOnLogin: "users-without-wallets",
