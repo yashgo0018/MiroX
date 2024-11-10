@@ -7,6 +7,7 @@
     "npm:@babel/plugin-transform-react-jsx-development@*": "7.25.9_@babel+core@7.26.0",
     "npm:@nomicfoundation/hardhat-ethers@^3.0.8": "3.0.8_ethers@6.13.4_hardhat@2.22.15",
     "npm:@nomicfoundation/hardhat-toolbox-viem@3": "3.0.0_@nomicfoundation+hardhat-ignition-viem@0.15.7__@nomicfoundation+hardhat-ignition@0.15.7___@nomicfoundation+hardhat-verify@2.0.11____hardhat@2.22.15_____ts-node@10.9.2______@types+node@22.5.4______typescript@5.6.3_____typescript@5.6.3____ts-node@10.9.2_____@types+node@22.5.4_____typescript@5.6.3____typescript@5.6.3___hardhat@2.22.15____ts-node@10.9.2_____@types+node@22.5.4_____typescript@5.6.3____typescript@5.6.3___ts-node@10.9.2____@types+node@22.5.4____typescript@5.6.3___typescript@5.6.3__@nomicfoundation+hardhat-viem@2.0.5___hardhat@2.22.15____ts-node@10.9.2_____@types+node@22.5.4_____typescript@5.6.3____typescript@5.6.3___typescript@5.0.4___viem@2.21.40____typescript@5.6.3____ws@8.18.0_____bufferutil@4.0.8_____utf-8-validate@5.0.10___ts-node@10.9.2____@types+node@22.5.4____typescript@5.6.3__@nomicfoundation+ignition-core@0.15.7__hardhat@2.22.15___ts-node@10.9.2____@types+node@22.5.4____typescript@5.6.3___typescript@5.6.3__viem@2.21.40___typescript@5.6.3___ws@8.18.0____bufferutil@4.0.8____utf-8-validate@5.0.10__@nomicfoundation+hardhat-verify@2.0.11___hardhat@2.22.15____ts-node@10.9.2_____@types+node@22.5.4_____typescript@5.6.3____typescript@5.6.3___ts-node@10.9.2____@types+node@22.5.4____typescript@5.6.3___typescript@5.6.3__ts-node@10.9.2___@types+node@22.5.4___typescript@5.6.3__typescript@5.6.3_@nomicfoundation+hardhat-network-helpers@1.0.12__hardhat@2.22.15___ts-node@10.9.2____@types+node@22.5.4____typescript@5.6.3___typescript@5.6.3__ts-node@10.9.2___@types+node@22.5.4___typescript@5.6.3__typescript@5.6.3_@nomicfoundation+hardhat-verify@2.0.11__hardhat@2.22.15___ts-node@10.9.2____@types+node@22.5.4____typescript@5.6.3___typescript@5.6.3__ts-node@10.9.2___@types+node@22.5.4___typescript@5.6.3__typescript@5.6.3_@nomicfoundation+hardhat-viem@2.0.5__hardhat@2.22.15___ts-node@10.9.2____@types+node@22.5.4____typescript@5.6.3___typescript@5.6.3__typescript@5.0.4__viem@2.21.40___typescript@5.6.3___ws@8.18.0____bufferutil@4.0.8____utf-8-validate@5.0.10__ts-node@10.9.2___@types+node@22.5.4___typescript@5.6.3_@types+chai@4.3.20_@types+chai-as-promised@7.1.8_@types+mocha@10.0.9_@types+node@22.9.0_chai@4.5.0_hardhat@2.22.15__ts-node@10.9.2___@types+node@22.5.4___typescript@5.6.3__typescript@5.6.3_hardhat-gas-reporter@1.0.10__hardhat@2.22.15___ts-node@10.9.2____@types+node@22.5.4____typescript@5.6.3___typescript@5.6.3__ts-node@10.9.2___@types+node@22.5.4___typescript@5.6.3__typescript@5.6.3_solidity-coverage@0.8.13__hardhat@2.22.15___ts-node@10.9.2____@types+node@22.5.4____typescript@5.6.3___typescript@5.6.3__ts-node@10.9.2___@types+node@22.5.4___typescript@5.6.3__typescript@5.6.3_ts-node@10.9.2__@types+node@22.5.4__typescript@5.6.3_typescript@5.6.3_viem@2.21.40__ws@8.18.0___bufferutil@4.0.8___utf-8-validate@5.0.10__typescript@5.6.3_viem@2.21.40__typescript@5.6.3__ws@8.18.0___bufferutil@4.0.8___utf-8-validate@5.0.10",
+    "npm:@nomicfoundation/hardhat-verify@^2.0.11": "2.0.11_hardhat@2.22.15_ts-node@10.9.2__@types+node@22.5.4__typescript@5.6.3",
     "npm:@openzeppelin/contracts@^5.1.0": "5.1.0",
     "npm:@preact/compat@*": "18.3.1_preact@10.24.3",
     "npm:@preact/preset-vite@*": "2.9.1_@babel+core@7.26.0_vite@5.4.10_preact@10.24.3",
@@ -1673,7 +1674,7 @@
     "@nomicfoundation/hardhat-ignition@0.15.7_@nomicfoundation+hardhat-verify@2.0.11__hardhat@2.22.15___ts-node@10.9.2____@types+node@22.5.4____typescript@5.6.3___typescript@5.6.3__ts-node@10.9.2___@types+node@22.5.4___typescript@5.6.3__typescript@5.6.3_hardhat@2.22.15__ts-node@10.9.2___@types+node@22.5.4___typescript@5.6.3__typescript@5.6.3_ts-node@10.9.2__@types+node@22.5.4__typescript@5.6.3_typescript@5.6.3": {
       "integrity": "sha512-RFhGazR0/JqHxuuIxjjMmM+nWFqEvA7wcVqcX7vUqqmAIGuok4HhnWQH8aOvBaVguiXvvlFDJL0PIlxmkFgIUg==",
       "dependencies": [
-        "@nomicfoundation/hardhat-verify",
+        "@nomicfoundation/hardhat-verify@2.0.11_hardhat@2.22.15__ts-node@10.9.2___@types+node@22.5.4___typescript@5.6.3__typescript@5.6.3_ts-node@10.9.2__@types+node@22.5.4__typescript@5.6.3_typescript@5.6.3",
         "@nomicfoundation/ignition-core",
         "@nomicfoundation/ignition-ui",
         "chalk@4.1.2",
@@ -1696,7 +1697,7 @@
       "dependencies": [
         "@nomicfoundation/hardhat-ignition-viem",
         "@nomicfoundation/hardhat-network-helpers",
-        "@nomicfoundation/hardhat-verify",
+        "@nomicfoundation/hardhat-verify@2.0.11_hardhat@2.22.15__ts-node@10.9.2___@types+node@22.5.4___typescript@5.6.3__typescript@5.6.3_ts-node@10.9.2__@types+node@22.5.4__typescript@5.6.3_typescript@5.6.3",
         "@nomicfoundation/hardhat-viem",
         "@types/chai",
         "@types/chai-as-promised",
@@ -1721,6 +1722,21 @@
         "chalk@2.4.2",
         "debug@4.3.7",
         "hardhat@2.22.15_ts-node@10.9.2__@types+node@22.5.4__typescript@5.6.3_typescript@5.6.3",
+        "lodash.clonedeep",
+        "semver@6.3.1",
+        "table",
+        "undici"
+      ]
+    },
+    "@nomicfoundation/hardhat-verify@2.0.11_hardhat@2.22.15_ts-node@10.9.2__@types+node@22.5.4__typescript@5.6.3": {
+      "integrity": "sha512-lGIo4dNjVQFdsiEgZp3KP6ntLiF7xJEJsbNHfSyIiFCyI0Yv0518ElsFtMC5uCuHEChiBBMrib9jWQvHHT+X3Q==",
+      "dependencies": [
+        "@ethersproject/abi",
+        "@ethersproject/address@5.7.0",
+        "cbor@8.1.0",
+        "chalk@2.4.2",
+        "debug@4.3.7",
+        "hardhat@2.22.15_ts-node@10.9.2__@types+node@22.5.4__typescript@5.6.3",
         "lodash.clonedeep",
         "semver@6.3.1",
         "table",
@@ -5036,6 +5052,56 @@
         "ws@7.5.10"
       ]
     },
+    "hardhat@2.22.15_ts-node@10.9.2__@types+node@22.5.4__typescript@5.6.3": {
+      "integrity": "sha512-BpTGa9PE/sKAaHi4s/S1e9WGv63DR1m7Lzfd60C8gSEchDPfAJssVRSq0MZ2v2k76ig9m0kHAwVLf5teYwu/Mw==",
+      "dependencies": [
+        "@ethersproject/abi",
+        "@metamask/eth-sig-util@4.0.1",
+        "@nomicfoundation/edr",
+        "@nomicfoundation/ethereumjs-common",
+        "@nomicfoundation/ethereumjs-tx",
+        "@nomicfoundation/ethereumjs-util",
+        "@nomicfoundation/solidity-analyzer",
+        "@sentry/node",
+        "@types/bn.js@5.1.6",
+        "@types/lru-cache",
+        "adm-zip",
+        "aggregate-error",
+        "ansi-escapes",
+        "boxen",
+        "chalk@2.4.2",
+        "chokidar@4.0.1",
+        "ci-info",
+        "debug@4.3.7",
+        "enquirer",
+        "env-paths",
+        "ethereum-cryptography@1.2.0",
+        "ethereumjs-abi",
+        "find-up@2.1.0",
+        "fp-ts",
+        "fs-extra@7.0.1",
+        "glob@7.2.0",
+        "immutable",
+        "io-ts",
+        "json-stream-stringify",
+        "keccak",
+        "lodash",
+        "mnemonist",
+        "mocha",
+        "p-map",
+        "raw-body",
+        "resolve@1.17.0",
+        "semver@6.3.1",
+        "solc",
+        "source-map-support",
+        "stacktrace-parser",
+        "ts-node@10.9.2_@types+node@22.5.4_typescript@5.6.3",
+        "tsort",
+        "undici",
+        "uuid@8.3.2",
+        "ws@7.5.10"
+      ]
+    },
     "hardhat@2.22.15_ts-node@10.9.2__@types+node@22.5.4__typescript@5.6.3_typescript@5.0.4": {
       "integrity": "sha512-BpTGa9PE/sKAaHi4s/S1e9WGv63DR1m7Lzfd60C8gSEchDPfAJssVRSq0MZ2v2k76ig9m0kHAwVLf5teYwu/Mw==",
       "dependencies": [
@@ -8309,6 +8375,7 @@
         "dependencies": [
           "npm:@nomicfoundation/hardhat-ethers@^3.0.8",
           "npm:@nomicfoundation/hardhat-toolbox-viem@3",
+          "npm:@nomicfoundation/hardhat-verify@^2.0.11",
           "npm:@openzeppelin/contracts@^5.1.0",
           "npm:@uniswap/v3-core@^1.0.1",
           "npm:@uniswap/v3-periphery@^1.4.4",

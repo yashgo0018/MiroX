@@ -10,6 +10,13 @@ async function deploy() {
   await orchestrator.waitForDeployment();
 
   console.log("Orchestrator deployed to:", await orchestrator.getAddress());
+
+  await hre.run("verify:verify", {
+    address: await orchestrator.getAddress(),
+    constructorArguments: [],
+  });
+
+  console.log("Orchestrator verified");
 }
 
 deploy().catch((err) => {

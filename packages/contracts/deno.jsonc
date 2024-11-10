@@ -7,6 +7,7 @@
   "imports": {
     "@nomicfoundation/hardhat-ethers": "npm:@nomicfoundation/hardhat-ethers@^3.0.8",
     "@nomicfoundation/hardhat-toolbox-viem": "npm:@nomicfoundation/hardhat-toolbox-viem@^3.0.0",
+    "@nomicfoundation/hardhat-verify": "npm:@nomicfoundation/hardhat-verify@^2.0.11",
     "@openzeppelin/contracts": "npm:@openzeppelin/contracts@^5.1.0",
     "@uniswap/v3-core": "npm:@uniswap/v3-core@^1.0.1",
     "@uniswap/v3-periphery": "npm:@uniswap/v3-periphery@^1.4.4",
