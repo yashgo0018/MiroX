@@ -73,8 +73,8 @@ For a hands-on test of the MiroX platform, follow these transactions on the BSC 
 2. **Register Manager**: [View Transaction](https://testnet.bscscan.com/tx/0xd5be76a7fadd34e6814faad77337a204f5a629ace335ce1fcfd8df695f77345a)
 3. **Create AMC Request**: [View Transaction](https://testnet.bscscan.com/tx/0x210cdc5d8b850b78171f8b1d8a026ba28989ad328b11066e8a89732dc19b4f13)
 4. **Accept AMC Request**: [View Transaction](https://testnet.bscscan.com/tx/0x0c62ab6041f1ddf763c1b2c99d13f8dda4271038ac24938d5f2f4ba4f21507a6)
-5. **Deposit Tokens In AMC**: [View Transaction](https://testnet.bscscan.com/tx/0x210cdc5d8b850b78171f8b1d8a026ba28989ad328b11066e8a89732dc19b4f13)
-6. **Trade In AMC**: [View Transaction](https://testnet.bscscan.com/tx/0x0c62ab6041f1ddf763c1b2c99d13f8dda4271038ac24938d5f2f4ba4f21507a6)
+5. **Deposit Tokens In AMC**: [View Transaction](https://testnet.bscscan.com/tx/0x5049a54e4b6ce3498bdfdbd887ee0d9fdf82b9919c617e3018a3af4b1ce176cc)
+6. **Trade In AMC**: [View Transaction](https://testnet.bscscan.com/tx/0x7d0b0f9cfd6881a345d9fddf5b3a7e94e11acbd15e008b0eb8a86d34d888f7e5)
 
 ### Usage Guide
 
