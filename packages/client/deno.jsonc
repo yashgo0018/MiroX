@@ -6,8 +6,10 @@
     "preview": "vite preview"
   },
   "imports": {
+    "autoprefixer": "npm:autoprefixer@^10.4.20",
     "privy": "npm:@privy-io/react-auth@^1.92.6",
     "tailwind-merge": "npm:tailwind-merge@^2.5.4",
+    "tailwindcss": "npm:tailwindcss@^3.4.14",
     "tailwindcss-motion": "npm:tailwindcss-motion@^0.4.1-beta",
     "lucide-preact": "npm:lucide-preact",
     "vaul": "npm:vaul@^1.1.1",
