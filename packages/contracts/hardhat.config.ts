@@ -1,4 +1,11 @@
 import type { HardhatUserConfig } from "hardhat/config";
+import "@nomicfoundation/hardhat-ethers";
+import dotenv from "dotenv";
+
+dotenv.config();
+
+const deployerKey = process.env.DEPLOYER_KEY || "";
+const bscTestnetUrl = process.env.BSC_TESTNET_URL || "";
 
 const config: HardhatUserConfig = {
   solidity: {
@@ -7,6 +14,12 @@ const config: HardhatUserConfig = {
   },
   paths: {
     sources: "./src",
+  },
+  networks: {
+    bscTestnet: {
+      accounts: [deployerKey],
+      url: bscTestnetUrl || "https://bsc-testnet-dataseed.bnbchain.org",
+    },
   },
 };
 

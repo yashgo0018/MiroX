@@ -5,16 +5,18 @@ import "./AMC.sol";
 import "./interfaces/IOrchestrator.sol";
 
 contract Orchestrator is IOrchestrator {
-    ISwapRouter public swapRouter;
+    // ISwapRouter public swapRouter;
 
     mapping(address => AMCRequest) public requests;
 
     mapping(string => address) public usernameMapping;
     mapping(address => string) public usernames;
 
-    constructor(ISwapRouter _swapRouter) {
-        swapRouter = _swapRouter;
-    }
+    // constructor(ISwapRouter _swapRouter) {
+    //     swapRouter = _swapRouter;
+    // }
+
+    constructor() {}
 
     function register(string calldata username) public {
         require(
@@ -46,8 +48,8 @@ contract Orchestrator is IOrchestrator {
                 commissionBP,
                 _metadata,
                 msg.sender,
-                usernameMapping[username],
-                swapRouter
+                usernameMapping[username]
+                // , swapRouter
             )
         );
 

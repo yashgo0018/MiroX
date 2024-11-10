@@ -20,7 +20,7 @@ contract AMC {
     address public owner;
     address public manager;
     IOrchestrator public orchestrator;
-    ISwapRouter public swapRouter;
+    // ISwapRouter public swapRouter;
 
     modifier onlyOwner() {
         require(msg.sender == owner, "Not the Owner");
@@ -46,10 +46,10 @@ contract AMC {
         uint16 _commissionBps,
         string memory _metadata,
         address _owner,
-        address _manager,
-        ISwapRouter _swapRouter
-    ) {
-        swapRouter = _swapRouter;
+        address _manager
+    ) // , ISwapRouter _swapRouter
+    {
+        // swapRouter = _swapRouter;
         status = AMC_Status.PROPOSED;
         commissionBps = _commissionBps;
         metadata = _metadata;

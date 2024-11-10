@@ -9,5 +9,5 @@
     "skipLibCheck": true,
     "resolveJsonModule": true
   },
-  "include": ["hardhat.config.ts", "contracts"]
+  "include": ["hardhat.config.ts", "src", "scripts"]
 }

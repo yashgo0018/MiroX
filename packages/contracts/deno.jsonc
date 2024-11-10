@@ -5,11 +5,14 @@
     "tests": "deno task compile; deno test"
   },
   "imports": {
+    "@nomicfoundation/hardhat-ethers": "npm:@nomicfoundation/hardhat-ethers@^3.0.8",
     "@nomicfoundation/hardhat-toolbox-viem": "npm:@nomicfoundation/hardhat-toolbox-viem@^3.0.0",
     "@openzeppelin/contracts": "npm:@openzeppelin/contracts@^5.1.0",
     "@uniswap/v3-core": "npm:@uniswap/v3-core@^1.0.1",
     "@uniswap/v3-periphery": "npm:@uniswap/v3-periphery@^1.4.4",
+    "dotenv": "npm:dotenv@^16.4.5",
     "hardhat": "npm:hardhat@^2.22.15",
+    "ts-node": "npm:ts-node@^10.9.2",
     "viem": "npm:viem@^2.21.40"
   },
   "exclude": ["artifacts", "cache", "definitions"]
