@@ -61,7 +61,7 @@ export default function OAuthLoginOptions() {
             handleOAuthLogin("github");
           }}
         >
-          <img src="/icons/github.png" alt="github" />
+          <img src="/icons/github.webp" alt="github" />
         </button>
       </div>
     </>

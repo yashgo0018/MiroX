@@ -6,4 +6,4 @@ export * as Avatar from "@radix-ui/react-avatar";
 
 export * as Select from "@radix-ui/react-select";
 
-export * as Select from "@radix-ui/react-accordian";
+export * as Accordion from "@radix-ui/react-accordion";

@@ -19,7 +19,7 @@ export default function DepositTokenSelect() {
       </Select.Trigger>
 
       <Select.Portal>
-        <Select.Content className="base p-2 rounded border">
+        <Select.Content className="base p-2 rounded border z-[99999]">
           <Select.ScrollUpButton className="">
             <Icon name="ChevronUp" />
           </Select.ScrollUpButton>
@@ -30,16 +30,18 @@ export default function DepositTokenSelect() {
                 value={token.name}
                 key={key}
               >
-                <Select.ItemText className="flex gap-x-2">
-                  <img
-                    src={token.icon}
-                    alt={token.name}
-                    className={"size-8"}
-                  />
+                <div className="flex gap-x-2">
+                  <Select.ItemText>
+                    <img
+                      src={token.icon}
+                      alt={token.name}
+                      className={"size-8 object-contain aspect-square"}
+                    />
+                  </Select.ItemText>
                   <span>
                     {token.name}
                   </span>
-                </Select.ItemText>
+                </div>
               </Select.Item>
             ))}
           </Select.Viewport>

@@ -7,10 +7,10 @@ export default function Navigation() {
 
   return (
     <div
-      className={"fixed bottom-0 w-full flex base z-[9999] px-3 py-2 justify-between"}
+      className={"fixed bottom-0 w-full flex base z-[999] px-3 py-2 justify-between"}
     >
       <NavItem icon="DoorClosed" title="Discover" href="/discover" />
-      <NavItem icon="ChartNoAxesColumn" title="Markets" href="/discover" />
+      <NavItem icon="ChartNoAxesColumn" title="Markets" href="/markets" />
 
       <button
         className={"flex flex-col items-center gap-y-1"}

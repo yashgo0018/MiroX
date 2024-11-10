@@ -7,7 +7,7 @@ export default function Layout(props: { children: Children }) {
 
   return (
     <>
-      {!["login"].includes(location.path) && <Navigation />}
+      {!["/login"].includes(location.path) && <Navigation />}
       {props.children}
     </>
   );

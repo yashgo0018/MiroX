@@ -17,8 +17,8 @@ export default function RequestAssetManagementDrawer(
         {props.children}
       </Drawer.Trigger>
       <Drawer.Portal>
-        <Drawer.Overlay className="fixed inset-0 backdrop-blur-sm" />
-        <Drawer.Content className="h-fit fixed bottom-0 left-0 right-0 outline-none">
+        <Drawer.Overlay className="fixed z-[99999] inset-0 backdrop-blur-sm" />
+        <Drawer.Content className="h-fit fixed bottom-0 left-0 right-0 outline-none z-[99999]">
           <div className="p-4 base flex flex-col items-center">
             <Drawer.Handle />
 
