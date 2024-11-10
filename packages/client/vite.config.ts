@@ -14,6 +14,9 @@ export default defineConfig({
         enabled: true,
       },
       manifest: manifest,
+      workbox: {
+        maximumFileSizeToCacheInBytes: 4000000,
+      },
     }),
   ],
 
