@@ -3,6 +3,7 @@
     "dev": "vite",
     "dev:ssr": "deno run -A server.ts",
     "build": "tsc -b && vite build",
+    "build-unsafe": "vite build",
     "preview": "vite preview"
   },
   "imports": {
