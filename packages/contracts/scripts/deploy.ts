@@ -1,4 +1,5 @@
 import hre from "hardhat";
+import process from "process";
 
 async function deploy() {
   const orchestratorFactory = await hre.ethers.getContractFactory(
