@@ -2,8 +2,9 @@
 pragma solidity >=0.8.0 <0.9.0;
 
 import "./AMC.sol";
+import "./interfaces/IOrchestrator.sol";
 
-contract Orchestrator {
+contract Orchestrator is IOrchestrator {
     struct AMCRequest {
         address amc;
         address owner;
@@ -38,6 +39,23 @@ contract Orchestrator {
         address indexed amc,
         address indexed owner,
         address indexed manager
+    );
+    event DepositMade(
+        address indexed amc,
+        address indexed token,
+        uint256 amount
+    );
+    event WithdrawalMade(
+        address indexed amc,
+        address indexed token,
+        uint256 amount
+    );
+    event TradeExecuted(
+        address indexed amc,
+        address indexed tokenIn,
+        address indexed tokenOut,
+        uint256 amountIn,
+        uint256 amountOut
     );
 
     ISwapRouter public swapRouter;
@@ -123,5 +141,25 @@ contract Orchestrator {
             requests[msg.sender].owner,
             requests[msg.sender].manager
         );
+    }
+
+    function logDeposit(address token, uint256 amount) external {
+        require(requests[msg.sender].amc != address(0), "AMC not found");
+        emit DepositMade(msg.sender, token, amount);
+    }
+
+    function logWithdrawal(address token, uint256 amount) external {
+        require(requests[msg.sender].amc != address(0), "AMC not found");
+        emit WithdrawalMade(msg.sender, token, amount);
+    }
+
+    function logTrade(
+        address tokenIn,
+        address tokenOut,
+        uint256 amountIn,
+        uint256 amountOut
+    ) external {
+        require(requests[msg.sender].amc != address(0), "AMC not found");
+        emit TradeExecuted(msg.sender, tokenIn, tokenOut, amountIn, amountOut);
     }
 }

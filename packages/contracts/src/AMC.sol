@@ -82,6 +82,7 @@ contract AMC {
     ) external onlyOwner whenActive {
         // transfer the tokens to the contract
         IERC20(tokenAddress).transferFrom(msg.sender, address(this), amount);
+        orchestrator.logDeposit(tokenAddress, amount);
     }
 
     function trade(
@@ -89,32 +90,33 @@ contract AMC {
         uint256 amountIn,
         address tokenOut
     ) external onlyManager returns (uint256 amountOut) {
-        // make a trade on uniswap
-        require(
-            IERC20(tokenIn).approve(address(swapRouter), amountIn),
-            "Approval failed"
-        );
+        // // make a trade on uniswap
+        // require(
+        //     IERC20(tokenIn).approve(address(swapRouter), amountIn),
+        //     "Approval failed"
+        // );
+        // // Set up the parameters for the swap.
+        // ISwapRouter.ExactInputSingleParams memory params = ISwapRouter
+        //     .ExactInputSingleParams({
+        //         tokenIn: tokenIn,
+        //         tokenOut: tokenOut,
+        //         fee: 3000,
+        //         recipient: address(this),
+        //         deadline: block.timestamp + 300, // 5-minute deadline
+        //         amountIn: amountIn,
+        //         amountOutMinimum: 0,
+        //         sqrtPriceLimitX96: 0 // No price limit
+        //     });
+        // // Perform the swap.
+        // amountOut = swapRouter.exactInputSingle(params);
 
-        // Set up the parameters for the swap.
-        ISwapRouter.ExactInputSingleParams memory params = ISwapRouter
-            .ExactInputSingleParams({
-                tokenIn: tokenIn,
-                tokenOut: tokenOut,
-                fee: 3000,
-                recipient: address(this),
-                deadline: block.timestamp + 300, // 5-minute deadline
-                amountIn: amountIn,
-                amountOutMinimum: 0,
-                sqrtPriceLimitX96: 0 // No price limit
-            });
-
-        // Perform the swap.
-        amountOut = swapRouter.exactInputSingle(params);
+        orchestrator.logTrade(tokenIn, tokenOut, amountIn, amountOut);
     }
 
     function withdraw(address tokenAddress, uint256 amount) external onlyOwner {
         // transfer the tokens to the owner
         IERC20(tokenAddress).transfer(owner, amount);
+        orchestrator.logWithdrawal(tokenAddress, amount);
     }
 
     receive() external payable {
