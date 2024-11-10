@@ -1,24 +1,38 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
-    "module": "ESNext",
-    "moduleResolution": "bundler",
+    "module": "amd",
+    "target": "esnext",
+    "baseUrl": ".",
     "noEmit": true,
-    "allowJs": true,
-    "checkJs": true,
-    "strict": false,
-    "allowImportingTsExtensions": false,
-    "allowArbitraryExtensions": true,
-
-    /* Preact Config */
-    "jsx": "react-jsx",
-    "jsxImportSource": "preact",
-    "skipLibCheck": true,
+    "noCheck": true,
     "paths": {
-      "react": ["../../node_modules/preact/compat/"],
-      "react-dom": ["../../node_modules/preact/compat/"],
-      "privy": ["../../node_modules/@privy-io/react-auth"]
+      "*.ts": ["*"],
+      "privy": ["../../node_modules/@privy-io/react-auth"],
+      "tailwindcss": ["../../node_modules/tailwindcss"],
+      "tailwindcss-motion": ["../../node_modules/tailwindcss-motion"],
+      "lucide-preact": ["../../node_modules/lucide-preact"],
+      "vaul": ["../../node_modules/vaul"],
+      "viem": ["../../node_modules/viem"],
+      "@radix-ui/react-avatar": ["../../node_modules/@radix-ui/react-avatar"],
+      "@radix-ui/react-form": ["../../node_modules/@radix-ui/react-form"],
+      "@radix-ui/react-accordion": [
+        "../../node_modules/@radix-ui/react-accordion"
+      ],
+      "@radix-ui/react-select": ["../../node_modules/@radix-ui/react-select"],
+      "@radix-ui/react-accessible-icon": [
+        "../../node_modules/@radix-ui/react-accessible-icon"
+      ],
+      "vite": ["../../node_modules/vite"],
+      "preact": ["../../node_modules/preact"],
+      "@preact/signals": ["../../node_modules/@preact/signals"],
+      "preact-iso": ["../../node_modules/preact-iso"],
+      "@preact/compat": ["../../node_modules/@preact/compat"],
+      "babel-plugin-transform-hook-names": [
+        "../../node_modules/babel-plugin-transform-hook-names"
+      ],
+      "@babel/plugin-transform-react-jsx-development": [
+        "../../node_modules/@babel/plugin-transform-react-jsx-development"
+      ]
     }
-  },
-  "include": ["node_modules/vite/client.d.ts", "**/*"]
+  }
 }
