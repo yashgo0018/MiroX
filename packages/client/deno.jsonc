@@ -8,6 +8,7 @@
   },
   "imports": {
     "privy": "npm:@privy-io/react-auth@^1.92.6",
+    "tailwindcss": "npm:tailwindcss",
     "tailwind-merge": "npm:tailwind-merge@^2.5.4",
     "tailwindcss-motion": "npm:tailwindcss-motion@^0.4.1-beta",
     "lucide-preact": "npm:lucide-preact",
