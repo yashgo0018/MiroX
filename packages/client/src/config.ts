@@ -1,7 +1,7 @@
-import { fraxtalTestnet } from "viem/chains";
+import { bscTestnet } from "viem/chains";
 import type { PrivyClientConfig } from "privy";
 
-export const supportedChains = [fraxtalTestnet];
+export const supportedChains = [bscTestnet];
 
 export const privyAppId = "cm3a4lqf70csu31g1l485vuci";
 
