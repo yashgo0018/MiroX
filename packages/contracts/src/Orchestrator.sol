@@ -5,60 +5,12 @@ import "./AMC.sol";
 import "./interfaces/IOrchestrator.sol";
 
 contract Orchestrator is IOrchestrator {
-    struct AMCRequest {
-        address amc;
-        address owner;
-        address manager;
-        uint16 commissionBP;
-        string metadata;
-    }
-
-    mapping(string => address) public usernameMapping;
-    mapping(address => string) public usernames;
+    ISwapRouter public swapRouter;
 
     mapping(address => AMCRequest) public requests;
 
-    event RequestCreated(
-        address indexed amc,
-        address indexed owner,
-        address indexed manager,
-        uint16 commissionBP,
-        string metadata
-    );
-    event RequestAccepted(
-        address indexed amc,
-        address indexed owner,
-        address indexed manager
-    );
-    event RequestRefused(
-        address indexed amc,
-        address indexed owner,
-        address indexed manager
-    );
-    event RequestDeactivated(
-        address indexed amc,
-        address indexed owner,
-        address indexed manager
-    );
-    event DepositMade(
-        address indexed amc,
-        address indexed token,
-        uint256 amount
-    );
-    event WithdrawalMade(
-        address indexed amc,
-        address indexed token,
-        uint256 amount
-    );
-    event TradeExecuted(
-        address indexed amc,
-        address indexed tokenIn,
-        address indexed tokenOut,
-        uint256 amountIn,
-        uint256 amountOut
-    );
-
-    ISwapRouter public swapRouter;
+    mapping(string => address) public usernameMapping;
+    mapping(address => string) public usernames;
 
     constructor(ISwapRouter _swapRouter) {
         swapRouter = _swapRouter;
